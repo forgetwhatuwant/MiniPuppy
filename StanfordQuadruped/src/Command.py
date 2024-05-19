@@ -17,6 +17,12 @@ class Command:
         self.trot_event = False
         self.activate_event = False
         self.dance_activate_event = False
+
+        self.dance_switch_event = False
+        self.gait_switch_event = False
+        
+        self.shutdown_signal = False
+        
         # Fales: dance triggered by controller
         # True: dance triggered by command line
         self.pseudo_dance_event = False
