@@ -353,8 +353,9 @@ def updateServoValue(MainWindow,servo):
         #update leg slider value
         value = MainWindow.getLegSlidersValue()
         
-        # overload detection
-        overload = OverLoadDetection()
+        # Disable overload detection as default because we delete Battery Management IC on PCBA from June 2024.
+        #overload = OverLoadDetection() # You can use this line if your mini pupper version is before June 2024.
+        overload = False
         if overload == True:
             tk.messagebox.showwarning('Warning','Servos overload, please check !!!') 
         else: 
